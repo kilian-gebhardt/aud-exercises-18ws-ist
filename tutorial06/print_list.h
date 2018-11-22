@@ -5,9 +5,9 @@
 
 list cons(int n, list next)
 {
-	list l = malloc(sizeof(*l));
-	l->value = n;
-	l->next = next;
+	list l = (list) malloc(sizeof(*l));
+	l->value = n; // (*l).value
+	l->next = next;  // (*l).next
 	return l;
 }
 
